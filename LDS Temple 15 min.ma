@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: LDS Temple 15 min.ma
-//Last modified: Thu, Jan 30, 2020 10:30:50 AM
+//Last modified: Thu, Jan 30, 2020 10:31:33 AM
 //Codeset: UTF-8
 requires maya "2019";
 requires "mtoa" "3.1.2";
@@ -14,13 +14,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "F9FDE565-DA42-BD92-3FE3-DFB58A85DAB3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 35.036147110598804 8.4375280856562647 0.61155822296780515 ;
+	setAttr ".t" -type "double3" 43.569787127520833 10.492629266973349 0.76051346359691774 ;
 	setAttr ".r" -type "double3" -13.538352727481621 88.999999999599268 4.5560402968189797e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "39A22300-AB4C-5B63-9C0A-34AF4FF1646A";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 36.042994992256347;
+	setAttr ".coi" 44.821869662028931;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
