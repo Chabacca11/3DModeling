@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Tire Tread.ma
-//Last modified: Fri, Jan 31, 2020 03:52:16 PM
+//Last modified: Sat, Feb 01, 2020 08:27:25 PM
 //Codeset: UTF-8
 requires maya "2019";
 requires "mtoa" "3.1.2";
@@ -14,14 +14,14 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "E22EBA6A-9F40-4F48-B790-C5962CD4440C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -31.134141645559865 2.2964081844142408 11.098830440349214 ;
-	setAttr ".r" -type "double3" 182.06164706996233 2628.1999999972168 0 ;
+	setAttr ".t" -type "double3" -10.489516727278016 -4.2302123615197189 25.186806863245902 ;
+	setAttr ".r" -type "double3" 170.66164706999919 2667.7999999963727 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "DD16A2F1-7741-CC30-1C53-A2AA51E72AF9";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 39.208858038691083;
+	setAttr ".coi" 31.529355749695284;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -102,7 +102,7 @@ createNode mesh -n "pCubeShape1" -p "transform1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 16 ".pt";
+	setAttr -s 15 ".pt";
 	setAttr ".pt[0]" -type "float3" 0.56197339 -0.098332599 0 ;
 	setAttr ".pt[2]" -type "float3" 0.58798796 -0.5036363 1.1920929e-07 ;
 	setAttr ".pt[4]" -type "float3" 0.039974637 -0.37697577 0.0077988338 ;
@@ -563,12 +563,9 @@ createNode mesh -n "pCubeShape7" -p "transform5";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 7 ".pt";
-	setAttr ".pt[20]" -type "float3" -0.046915967 0.039570909 0 ;
-	setAttr ".pt[21]" -type "float3" -0.014737487 0.039570868 -0.061909631 ;
-	setAttr ".pt[22]" -type "float3" -0.016261578 0.091609895 -0.11594458 ;
-	setAttr ".pt[23]" -type "float3" -0.070569284 0.13606192 -0.054034956 ;
-	setAttr ".pt[24]" -type "float3" -0.094824307 0.13606194 4.6566129e-09 ;
+	setAttr -s 5 ".pt[20:24]" -type "float3"  -0.046915967 0.039570909 
+		0 -0.014737487 0.039570868 -0.061909631 -0.016261578 0.091609895 -0.11594458 -0.070569284 
+		0.13606192 -0.054034956 -0.094824307 0.13606194 4.6566129e-09;
 	setAttr -s 25 ".vt[0:24]"  -0.76965141 -0.5 0.5 0.19636026 -0.5 0.5
 		 -0.76965141 0.5 0.5 0.19636032 0.5 0.5 -0.21609738 0.5 -0.5 0.69989896 0.5 -0.5 -0.21609738 -0.5 -0.5
 		 0.69989896 -0.5 -0.5 0.42827487 0.5 0 -0.51463705 0.5 0 -0.51463705 -0.5 0 0.42827487 -0.5 0
@@ -653,7 +650,7 @@ createNode mesh -n "pCubeShape8" -p "transform6";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 9 ".pt";
+	setAttr -s 6 ".pt";
 	setAttr ".pt[3]" -type "float3" 0 -7.4505806e-09 0 ;
 	setAttr ".pt[5]" -type "float3" 0 0 -1.4901161e-08 ;
 	setAttr ".pt[8]" -type "float3" 0.19352004 0.033861622 0 ;
@@ -725,9 +722,8 @@ createNode mesh -n "pCube9Shape" -p "transform9";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube10";
 	rename -uid "88A75038-2C43-E996-D295-D899C1E9F44B";
@@ -791,9 +787,8 @@ createNode mesh -n "pCube10Shape" -p "transform10";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr -s 209 ".vt";
 	setAttr ".vt[0:165]"  4.65318871 1.07153213 0.74999994 5.23279572 1.07153213 0.74999994
 		 4.65318871 1.3715322 0.75 5.23279572 1.3715322 0.75 4.98532152 1.37153208 -0.75 5.53491926 1.37153208 -0.75
@@ -1268,9 +1263,8 @@ createNode mesh -n "pCube11Shape" -p "transform11";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr -s 209 ".vt";
 	setAttr ".vt[0:165]"  4.65318871 1.07153213 0.74999994 5.23279572 1.07153213 0.74999994
 		 4.65318871 1.3715322 0.75 5.23279572 1.3715322 0.75 4.98532152 1.37153208 -0.75 5.53491926 1.37153208 -0.75
@@ -1745,9 +1739,8 @@ createNode mesh -n "pCube12Shape" -p "transform12";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr -s 209 ".vt";
 	setAttr ".vt[0:165]"  4.65318871 1.07153213 0.74999994 5.23279572 1.07153213 0.74999994
 		 4.65318871 1.3715322 0.75 5.23279572 1.3715322 0.75 4.98532152 1.37153208 -0.75 5.53491926 1.37153208 -0.75
@@ -2160,7 +2153,7 @@ createNode mesh -n "pCube12Shape" -p "transform12";
 createNode transform -n "pCube13";
 	rename -uid "9E6FA9D3-6248-F7E2-3A05-51A6A7144895";
 	setAttr ".t" -type "double3" 0 -2.6179499718549697 5.6795223638584131 ;
-	setAttr ".r" -type "double3" 45.000000000000021 0 0 ;
+	setAttr ".r" -type "double3" 45.000000000000028 0 0 ;
 	setAttr ".s" -type "double3" 1 1.0000000000000004 1.0000000000000004 ;
 	setAttr ".rp" -type "double3" 3.7588382862970904 1.1861342416653062 8.9406968439842456e-08 ;
 	setAttr ".rpt" -type "double3" 0 -0.34741073920647902 0.83872353949240652 ;
@@ -2222,9 +2215,8 @@ createNode mesh -n "pCube13Shape" -p "transform42";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr -s 209 ".vt";
 	setAttr ".vt[0:165]"  4.65318871 1.07153213 0.74999994 5.23279572 1.07153213 0.74999994
 		 4.65318871 1.3715322 0.75 5.23279572 1.3715322 0.75 4.98532152 1.37153208 -0.75 5.53491926 1.37153208 -0.75
@@ -2699,9 +2691,8 @@ createNode mesh -n "pCube14Shape" -p "transform21";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr -s 209 ".vt";
 	setAttr ".vt[0:165]"  4.65318871 1.07153213 0.74999994 5.23279572 1.07153213 0.74999994
 		 4.65318871 1.3715322 0.75 5.23279572 1.3715322 0.75 4.98532152 1.37153208 -0.75 5.53491926 1.37153208 -0.75
@@ -3176,9 +3167,8 @@ createNode mesh -n "pCube15Shape" -p "transform40";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr -s 209 ".vt";
 	setAttr ".vt[0:165]"  4.65318871 1.07153213 0.74999994 5.23279572 1.07153213 0.74999994
 		 4.65318871 1.3715322 0.75 5.23279572 1.3715322 0.75 4.98532152 1.37153208 -0.75 5.53491926 1.37153208 -0.75
@@ -3653,9 +3643,8 @@ createNode mesh -n "pCube16Shape" -p "transform39";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr -s 209 ".vt";
 	setAttr ".vt[0:165]"  4.65318871 1.07153213 0.74999994 5.23279572 1.07153213 0.74999994
 		 4.65318871 1.3715322 0.75 5.23279572 1.3715322 0.75 4.98532152 1.37153208 -0.75 5.53491926 1.37153208 -0.75
@@ -4130,9 +4119,8 @@ createNode mesh -n "pCube17Shape" -p "transform41";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr -s 209 ".vt";
 	setAttr ".vt[0:165]"  4.65318871 1.07153213 0.74999994 5.23279572 1.07153213 0.74999994
 		 4.65318871 1.3715322 0.75 5.23279572 1.3715322 0.75 4.98532152 1.37153208 -0.75 5.53491926 1.37153208 -0.75
@@ -4607,9 +4595,8 @@ createNode mesh -n "pCube18Shape" -p "transform43";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr -s 209 ".vt";
 	setAttr ".vt[0:165]"  4.65318871 1.07153213 0.74999994 5.23279572 1.07153213 0.74999994
 		 4.65318871 1.3715322 0.75 5.23279572 1.3715322 0.75 4.98532152 1.37153208 -0.75 5.53491926 1.37153208 -0.75
@@ -5084,9 +5071,8 @@ createNode mesh -n "pCube19Shape" -p "transform44";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr -s 209 ".vt";
 	setAttr ".vt[0:165]"  4.65318871 1.07153213 0.74999994 5.23279572 1.07153213 0.74999994
 		 4.65318871 1.3715322 0.75 5.23279572 1.3715322 0.75 4.98532152 1.37153208 -0.75 5.53491926 1.37153208 -0.75
@@ -5561,9 +5547,8 @@ createNode mesh -n "pCube20Shape" -p "transform19";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr -s 209 ".vt";
 	setAttr ".vt[0:165]"  4.65318871 1.07153213 0.74999994 5.23279572 1.07153213 0.74999994
 		 4.65318871 1.3715322 0.75 5.23279572 1.3715322 0.75 4.98532152 1.37153208 -0.75 5.53491926 1.37153208 -0.75
@@ -6038,9 +6023,8 @@ createNode mesh -n "pCube21Shape" -p "transform18";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr -s 209 ".vt";
 	setAttr ".vt[0:165]"  4.65318871 1.07153213 0.74999994 5.23279572 1.07153213 0.74999994
 		 4.65318871 1.3715322 0.75 5.23279572 1.3715322 0.75 4.98532152 1.37153208 -0.75 5.53491926 1.37153208 -0.75
@@ -6515,9 +6499,8 @@ createNode mesh -n "pCube22Shape" -p "transform20";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr -s 209 ".vt";
 	setAttr ".vt[0:165]"  4.65318871 1.07153213 0.74999994 5.23279572 1.07153213 0.74999994
 		 4.65318871 1.3715322 0.75 5.23279572 1.3715322 0.75 4.98532152 1.37153208 -0.75 5.53491926 1.37153208 -0.75
@@ -6992,9 +6975,8 @@ createNode mesh -n "pCube23Shape" -p "transform37";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr -s 209 ".vt";
 	setAttr ".vt[0:165]"  4.65318871 1.07153213 0.74999994 5.23279572 1.07153213 0.74999994
 		 4.65318871 1.3715322 0.75 5.23279572 1.3715322 0.75 4.98532152 1.37153208 -0.75 5.53491926 1.37153208 -0.75
@@ -7469,9 +7451,8 @@ createNode mesh -n "pCube24Shape" -p "transform38";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr -s 209 ".vt";
 	setAttr ".vt[0:165]"  4.65318871 1.07153213 0.74999994 5.23279572 1.07153213 0.74999994
 		 4.65318871 1.3715322 0.75 5.23279572 1.3715322 0.75 4.98532152 1.37153208 -0.75 5.53491926 1.37153208 -0.75
@@ -7946,9 +7927,8 @@ createNode mesh -n "pCube25Shape" -p "transform15";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr -s 209 ".vt";
 	setAttr ".vt[0:165]"  4.65318871 1.07153213 0.74999994 5.23279572 1.07153213 0.74999994
 		 4.65318871 1.3715322 0.75 5.23279572 1.3715322 0.75 4.98532152 1.37153208 -0.75 5.53491926 1.37153208 -0.75
@@ -8423,9 +8403,8 @@ createNode mesh -n "pCube26Shape" -p "transform16";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr -s 209 ".vt";
 	setAttr ".vt[0:165]"  4.65318871 1.07153213 0.74999994 5.23279572 1.07153213 0.74999994
 		 4.65318871 1.3715322 0.75 5.23279572 1.3715322 0.75 4.98532152 1.37153208 -0.75 5.53491926 1.37153208 -0.75
@@ -8900,9 +8879,8 @@ createNode mesh -n "pCube27Shape" -p "transform17";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr -s 209 ".vt";
 	setAttr ".vt[0:165]"  4.65318871 1.07153213 0.74999994 5.23279572 1.07153213 0.74999994
 		 4.65318871 1.3715322 0.75 5.23279572 1.3715322 0.75 4.98532152 1.37153208 -0.75 5.53491926 1.37153208 -0.75
@@ -9377,9 +9355,8 @@ createNode mesh -n "pCube28Shape" -p "transform13";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr -s 209 ".vt";
 	setAttr ".vt[0:165]"  4.65318871 1.07153213 0.74999994 5.23279572 1.07153213 0.74999994
 		 4.65318871 1.3715322 0.75 5.23279572 1.3715322 0.75 4.98532152 1.37153208 -0.75 5.53491926 1.37153208 -0.75
@@ -9854,9 +9831,8 @@ createNode mesh -n "pCube29Shape" -p "transform14";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr -s 209 ".vt";
 	setAttr ".vt[0:165]"  4.65318871 1.07153213 0.74999994 5.23279572 1.07153213 0.74999994
 		 4.65318871 1.3715322 0.75 5.23279572 1.3715322 0.75 4.98532152 1.37153208 -0.75 5.53491926 1.37153208 -0.75
@@ -10331,9 +10307,8 @@ createNode mesh -n "pCube30Shape" -p "transform29";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr -s 209 ".vt";
 	setAttr ".vt[0:165]"  4.65318871 1.07153213 0.74999994 5.23279572 1.07153213 0.74999994
 		 4.65318871 1.3715322 0.75 5.23279572 1.3715322 0.75 4.98532152 1.37153208 -0.75 5.53491926 1.37153208 -0.75
@@ -10808,9 +10783,8 @@ createNode mesh -n "pCube31Shape" -p "transform30";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr -s 209 ".vt";
 	setAttr ".vt[0:165]"  4.65318871 1.07153213 0.74999994 5.23279572 1.07153213 0.74999994
 		 4.65318871 1.3715322 0.75 5.23279572 1.3715322 0.75 4.98532152 1.37153208 -0.75 5.53491926 1.37153208 -0.75
@@ -11285,9 +11259,8 @@ createNode mesh -n "pCube32Shape" -p "transform31";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr -s 209 ".vt";
 	setAttr ".vt[0:165]"  4.65318871 1.07153213 0.74999994 5.23279572 1.07153213 0.74999994
 		 4.65318871 1.3715322 0.75 5.23279572 1.3715322 0.75 4.98532152 1.37153208 -0.75 5.53491926 1.37153208 -0.75
@@ -11762,9 +11735,8 @@ createNode mesh -n "pCube33Shape" -p "transform27";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr -s 209 ".vt";
 	setAttr ".vt[0:165]"  4.65318871 1.07153213 0.74999994 5.23279572 1.07153213 0.74999994
 		 4.65318871 1.3715322 0.75 5.23279572 1.3715322 0.75 4.98532152 1.37153208 -0.75 5.53491926 1.37153208 -0.75
@@ -12239,9 +12211,8 @@ createNode mesh -n "pCube34Shape" -p "transform28";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr -s 209 ".vt";
 	setAttr ".vt[0:165]"  4.65318871 1.07153213 0.74999994 5.23279572 1.07153213 0.74999994
 		 4.65318871 1.3715322 0.75 5.23279572 1.3715322 0.75 4.98532152 1.37153208 -0.75 5.53491926 1.37153208 -0.75
@@ -12654,7 +12625,7 @@ createNode mesh -n "pCube34Shape" -p "transform28";
 createNode transform -n "pCube35";
 	rename -uid "E1B7E1D4-E149-4668-FAEF-42B6033D9043";
 	setAttr ".t" -type "double3" 0 -10.157775072363719 -10.05280978403127 ;
-	setAttr ".r" -type "double3" -94.999999999999872 0 0 ;
+	setAttr ".r" -type "double3" -94.999999999999886 0 0 ;
 	setAttr ".s" -type "double3" 1 1.0000000000000016 1.0000000000000016 ;
 	setAttr ".rp" -type "double3" 3.7588382862970904 1.1861342416653076 8.9406968439842561e-08 ;
 	setAttr ".rpt" -type "double3" 0 -1.2895125634293276 -1.1816207399713528 ;
@@ -12716,9 +12687,8 @@ createNode mesh -n "pCube35Shape" -p "transform34";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr -s 209 ".vt";
 	setAttr ".vt[0:165]"  4.65318871 1.07153213 0.74999994 5.23279572 1.07153213 0.74999994
 		 4.65318871 1.3715322 0.75 5.23279572 1.3715322 0.75 4.98532152 1.37153208 -0.75 5.53491926 1.37153208 -0.75
@@ -13131,7 +13101,7 @@ createNode mesh -n "pCube35Shape" -p "transform34";
 createNode transform -n "pCube36";
 	rename -uid "5CABCBFD-5B4A-D1C3-7477-6DB336297527";
 	setAttr ".t" -type "double3" 0 -8.5397834853032055 -10.06993419351274 ;
-	setAttr ".r" -type "double3" -84.999999999999858 0 0 ;
+	setAttr ".r" -type "double3" -84.999999999999872 0 0 ;
 	setAttr ".s" -type "double3" 1 1.0000000000000016 1.0000000000000016 ;
 	setAttr ".rp" -type "double3" 3.7588382862970904 1.1861342416653076 8.9406968439842561e-08 ;
 	setAttr ".rpt" -type "double3" 0 -1.0827557417677873 -1.1816207243866899 ;
@@ -13193,9 +13163,8 @@ createNode mesh -n "pCube36Shape" -p "transform35";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr -s 209 ".vt";
 	setAttr ".vt[0:165]"  4.65318871 1.07153213 0.74999994 5.23279572 1.07153213 0.74999994
 		 4.65318871 1.3715322 0.75 5.23279572 1.3715322 0.75 4.98532152 1.37153208 -0.75 5.53491926 1.37153208 -0.75
@@ -13670,9 +13639,8 @@ createNode mesh -n "pCube37Shape" -p "transform36";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr -s 209 ".vt";
 	setAttr ".vt[0:165]"  4.65318871 1.07153213 0.74999994 5.23279572 1.07153213 0.74999994
 		 4.65318871 1.3715322 0.75 5.23279572 1.3715322 0.75 4.98532152 1.37153208 -0.75 5.53491926 1.37153208 -0.75
@@ -14147,9 +14115,8 @@ createNode mesh -n "pCube38Shape" -p "transform32";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr -s 209 ".vt";
 	setAttr ".vt[0:165]"  4.65318871 1.07153213 0.74999994 5.23279572 1.07153213 0.74999994
 		 4.65318871 1.3715322 0.75 5.23279572 1.3715322 0.75 4.98532152 1.37153208 -0.75 5.53491926 1.37153208 -0.75
@@ -14624,9 +14591,8 @@ createNode mesh -n "pCube39Shape" -p "transform33";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr -s 209 ".vt";
 	setAttr ".vt[0:165]"  4.65318871 1.07153213 0.74999994 5.23279572 1.07153213 0.74999994
 		 4.65318871 1.3715322 0.75 5.23279572 1.3715322 0.75 4.98532152 1.37153208 -0.75 5.53491926 1.37153208 -0.75
@@ -15101,9 +15067,8 @@ createNode mesh -n "pCube40Shape" -p "transform24";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr -s 209 ".vt";
 	setAttr ".vt[0:165]"  4.65318871 1.07153213 0.74999994 5.23279572 1.07153213 0.74999994
 		 4.65318871 1.3715322 0.75 5.23279572 1.3715322 0.75 4.98532152 1.37153208 -0.75 5.53491926 1.37153208 -0.75
@@ -15578,9 +15543,8 @@ createNode mesh -n "pCube41Shape" -p "transform25";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr -s 209 ".vt";
 	setAttr ".vt[0:165]"  4.65318871 1.07153213 0.74999994 5.23279572 1.07153213 0.74999994
 		 4.65318871 1.3715322 0.75 5.23279572 1.3715322 0.75 4.98532152 1.37153208 -0.75 5.53491926 1.37153208 -0.75
@@ -16055,9 +16019,8 @@ createNode mesh -n "pCube42Shape" -p "transform26";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr -s 209 ".vt";
 	setAttr ".vt[0:165]"  4.65318871 1.07153213 0.74999994 5.23279572 1.07153213 0.74999994
 		 4.65318871 1.3715322 0.75 5.23279572 1.3715322 0.75 4.98532152 1.37153208 -0.75 5.53491926 1.37153208 -0.75
@@ -16532,9 +16495,8 @@ createNode mesh -n "pCube43Shape" -p "transform22";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr -s 209 ".vt";
 	setAttr ".vt[0:165]"  4.65318871 1.07153213 0.74999994 5.23279572 1.07153213 0.74999994
 		 4.65318871 1.3715322 0.75 5.23279572 1.3715322 0.75 4.98532152 1.37153208 -0.75 5.53491926 1.37153208 -0.75
@@ -17009,9 +16971,8 @@ createNode mesh -n "pCube44Shape" -p "transform23";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt";
-	setAttr ".pt[197]" -type "float3" 0 2.2351742e-08 0 ;
-	setAttr ".pt[198]" -type "float3" 0 2.2351742e-08 0 ;
+	setAttr -s 2 ".pt[197:198]" -type "float3"  0 2.2351742e-08 0 0 2.2351742e-08 
+		0;
 	setAttr -s 209 ".vt";
 	setAttr ".vt[0:165]"  4.65318871 1.07153213 0.74999994 5.23279572 1.07153213 0.74999994
 		 4.65318871 1.3715322 0.75 5.23279572 1.3715322 0.75 4.98532152 1.37153208 -0.75 5.53491926 1.37153208 -0.75
@@ -17446,6 +17407,7 @@ createNode mesh -n "pCube45Shape" -p "transform46";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "nurbsCircle1";
 	rename -uid "B163AB7C-1A43-E0F4-2D06-9E8C478893C8";
+	setAttr ".s" -type "double3" 0.43177127755041222 1 1 ;
 	setAttr ".rp" -type "double3" -0.094027313810768121 -0.14800182146980212 0.46908498223890738 ;
 	setAttr ".sp" -type "double3" -0.094027313810768121 -0.14800182146980212 0.46908498223890738 ;
 createNode nurbsCurve -n "nurbsCircleShape1" -p "nurbsCircle1";
@@ -17454,6 +17416,7 @@ createNode nurbsCurve -n "nurbsCircleShape1" -p "nurbsCircle1";
 	setAttr ".tw" yes;
 createNode transform -n "nurbsCircle2";
 	rename -uid "F14F9D61-9F47-6720-6E5B-D7815EDD1933";
+	setAttr ".s" -type "double3" 0.43177127755041222 1 1 ;
 	setAttr ".rp" -type "double3" 7.4010285607499489 -0.14800182146980212 0.46908498223890738 ;
 	setAttr ".sp" -type "double3" 7.4010285607499489 -0.14800182146980212 0.46908498223890738 ;
 createNode nurbsCurve -n "nurbsCircleShape2" -p "nurbsCircle2";
@@ -17477,6 +17440,7 @@ createNode nurbsCurve -n "nurbsCircleShape2" -p "nurbsCircle2";
 		;
 createNode transform -n "nurbsCircle3";
 	rename -uid "DA1CF230-3440-C82D-71A8-0D94ABF847FB";
+	setAttr ".s" -type "double3" 0.43177127755041222 1 1 ;
 	setAttr ".rp" -type "double3" -0.094027313810768121 -0.14800182146980212 0.46908498223890738 ;
 	setAttr ".sp" -type "double3" -0.094027313810768121 -0.14800182146980212 0.46908498223890738 ;
 createNode nurbsCurve -n "nurbsCircleShape3" -p "nurbsCircle3";
@@ -17500,6 +17464,7 @@ createNode nurbsCurve -n "nurbsCircleShape3" -p "nurbsCircle3";
 		;
 createNode transform -n "nurbsCircle4";
 	rename -uid "25559FD2-F046-6BDA-C94D-1F9AB8C6BF21";
+	setAttr ".s" -type "double3" 0.43177127755041222 1 1 ;
 	setAttr ".rp" -type "double3" -0.094027313810768121 -0.14800182146980212 0.46908498223890738 ;
 	setAttr ".sp" -type "double3" -0.094027313810768121 -0.14800182146980212 0.46908498223890738 ;
 createNode nurbsCurve -n "nurbsCircleShape4" -p "nurbsCircle4";
@@ -17523,6 +17488,7 @@ createNode nurbsCurve -n "nurbsCircleShape4" -p "nurbsCircle4";
 		;
 createNode transform -n "nurbsCircle5";
 	rename -uid "2AE64F5E-0644-4489-4AF1-28B79D9D8DD9";
+	setAttr ".s" -type "double3" 0.43177127755041222 1 1 ;
 	setAttr ".rp" -type "double3" 7.4092659440535451 -0.14800182146980212 0.46908498223890738 ;
 	setAttr ".sp" -type "double3" 7.4092659440535451 -0.14800182146980212 0.46908498223890738 ;
 createNode nurbsCurve -n "nurbsCircleShape5" -p "nurbsCircle5";
@@ -17546,6 +17512,7 @@ createNode nurbsCurve -n "nurbsCircleShape5" -p "nurbsCircle5";
 		;
 createNode transform -n "nurbsCircle6";
 	rename -uid "AF22945E-8A4A-D142-A1CB-5AA3BC715314";
+	setAttr ".s" -type "double3" 0.43177127755041222 1 1 ;
 	setAttr ".rp" -type "double3" 7.4092659440535451 -0.14800182146980212 0.46908498223890738 ;
 	setAttr ".sp" -type "double3" 7.4092659440535451 -0.14800182146980212 0.46908498223890738 ;
 createNode nurbsCurve -n "nurbsCircleShape6" -p "nurbsCircle6";
@@ -17587,6 +17554,7 @@ createNode mesh -n "loftedSurfaceShape1" -p "transform45";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "nurbsCircle7";
 	rename -uid "D1CD9FF9-0C4D-3FA9-95FC-FB8BF0B1E475";
+	setAttr ".s" -type "double3" 0.43177127755041222 1 1 ;
 	setAttr ".rp" -type "double3" 3.654768168926239 -0.13782500558513799 0.45920628641987138 ;
 	setAttr ".sp" -type "double3" 3.654768168926239 -0.13782500558513799 0.45920628641987138 ;
 createNode mesh -n "nurbsCircle7Shape" -p "nurbsCircle7";
@@ -17602,22 +17570,22 @@ createNode mesh -n "nurbsCircle7Shape" -p "nurbsCircle7";
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "D75024B9-3B4D-3DB3-6B8C-66B7D1324DAC";
+	rename -uid "B282CA19-FB48-4F12-63DE-8CB862C9262B";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "475441FC-9B41-8249-607C-409E0D48C1C1";
+	rename -uid "536A048D-6847-EF20-D078-61B592F9199E";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "9ABAF111-CC49-0E50-1E58-F99B6384A772";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "4CC0DDF5-5E41-363F-AAF3-2890DE0DD8A3";
+	rename -uid "E006C446-3A43-E267-88B9-9385ADC4CCF5";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "13F13E17-8348-7B54-AF88-5C9F29D36548";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "672A386A-5047-2451-3650-58B119331369";
+	rename -uid "7D7ED61F-C841-80FD-8A2F-4B9659A850BA";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "B0631D1A-5347-8F22-66B4-4891DA7DE79B";
+	rename -uid "6DA5F238-EC43-710F-E35D-80A465CFFDC3";
 createNode polyCube -n "polyCube1";
 	rename -uid "41609C6B-174E-B085-BF8C-E39BB48CED2B";
 	setAttr ".cuv" 4;
@@ -18019,7 +17987,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n"
 		+ "            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n"
-		+ "            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"0\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n"
+		+ "            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n"
 		+ "            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n"
 		+ "                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 1\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n"
 		+ "                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 1\n                -autoFitTime 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n"
@@ -18077,8 +18045,6 @@ select -ne :defaultResolution;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "groupId15.id" "pCubeShape1.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "pCubeShape1.iog.og[0].gco";
 connectAttr "groupParts1.og" "pCubeShape1.i";
