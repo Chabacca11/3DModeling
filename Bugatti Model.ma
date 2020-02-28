@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Bugatti Model.ma
-//Last modified: Thu, Feb 27, 2020 11:15:50 PM
+//Last modified: Thu, Feb 27, 2020 11:16:17 PM
 //Codeset: UTF-8
 requires maya "2019";
 requires "mtoa" "3.1.2";
