@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Bugatti Model.ma
-//Last modified: Thu, Feb 27, 2020 10:11:06 PM
+//Last modified: Thu, Feb 27, 2020 11:15:50 PM
 //Codeset: UTF-8
 requires maya "2019";
 requires "mtoa" "3.1.2";
@@ -14,8 +14,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "31521CA3-814A-762B-C0FE-5E9050C2A067";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -15.835481178029083 2.9429036467099774 -10.761781894959485 ;
-	setAttr ".r" -type "double3" 351.26164722181642 235.80000000033576 0 ;
+	setAttr ".t" -type "double3" -10.983208435596962 3.3285698158511763 -10.532518209601202 ;
+	setAttr ".r" -type "double3" 347.66164722181065 226.20000000032925 0 ;
 	setAttr ".rp" -type "double3" 2.2204460492503131e-16 1.8735013540549517e-16 0 ;
 	setAttr ".rpt" -type "double3" -4.3586130636055734e-16 -2.9681742359452889e-17 1.3196406650100246e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -23,7 +23,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 19.371089168650915;
+	setAttr ".coi" 15.57704029673074;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
