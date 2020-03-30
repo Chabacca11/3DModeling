@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Pipe Practice 15 min.ma
-//Last modified: Fri, Mar 27, 2020 04:28:01 PM
+//Last modified: Fri, Mar 27, 2020 04:29:03 PM
 //Codeset: UTF-8
 requires maya "2019";
 requires "mtoa" "3.1.2";
@@ -14,13 +14,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "4F720CA8-6946-B9A1-FD2A-298B36B1D1AE";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 18.196562550129002 4.1963589153487622 -1.5919929382179903 ;
+	setAttr ".t" -type "double3" 14.632558119864555 3.3744541339319785 -1.2801829538241256 ;
 	setAttr ".r" -type "double3" -12.9383527302518 94.999999999833378 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "611FB545-B244-E6A3-ED9B-C986666DB193";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 18.741898471136842;
+	setAttr ".coi" 15.071083777499013;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
